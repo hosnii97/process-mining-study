@@ -633,13 +633,22 @@ html {
 .schedule-container {
   max-width: 1400px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .schedule-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   align-items: start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1025px) {
+  .schedule-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .schedule-text {
